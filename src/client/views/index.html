@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="">
+                <img src="https://cu1.uicdn.net/d58/6db58c1ec9c835f41b07f17b625c9/webapp/25716-logo-generator.svg" class="logo" />
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <textarea id="name" type="text" name="input" value="" placeholder="Name"></textarea>
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            <section>
+            <section>
+                <h3>Form Results:</h3>
+                <ul>
+                    <li>
+                        <span>
+                            Score Tag: <div id="score_tag" />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Agreement: <div id="agreement" />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                        Subjectivity: <div id="subjectivity" />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Confidence: <div id="confidence" />
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Irony: <div id="irony" />
+                        </span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>Footer Lorem Ipsum</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
