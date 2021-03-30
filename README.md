@@ -2,6 +2,8 @@
 
 This app was build using HTML, CSS, and JS.
 
+For dates calculation, it uses moment and Moment-Timezone
+
 ## Commands to run:
 
 - npm run build-prod
