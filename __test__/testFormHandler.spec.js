@@ -1,18 +1,20 @@
+import { handleSubmit } from "../src/client/js/formHandler";
 import { checkForName } from "../src/client/js/nameChecker.js";
 
 describe("Testing the submit functionality", () => {
-  test("Testing the checkForName() function", (done) => {
+  test("Testing the handleSubmit() function", () => {
+    expect(handleSubmit).toBeDefined();
+  });
+
+  test("Testing the checkForName() function", () => {
     expect(checkForName).toBeDefined();
-    done();
   });
 
-  test("Testing short input", (done) => {
+  test("Testing short input", () => {
     expect(checkForName("test")).toBeFalsy();
-    done();
   });
 
-  test("Testing longer input", (done) => {
+  test("Testing longer input", () => {
     expect(checkForName("longer input")).toBeTruthy();
-    done();
   });
 });
